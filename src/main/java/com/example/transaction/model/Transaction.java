@@ -2,6 +2,9 @@ package com.example.transaction.model;
 
 import java.time.LocalDate;
 
+
+
+
 public class Transaction {
     private long id;
     private String name;
@@ -22,8 +25,12 @@ public class Transaction {
         this.description = description;
         this.amount = amount;
         this.date = date;
+        this.id = -1;
     }
-
+   public String write(){
+        return id+"/"+name+"/"+ description+"/" + amount+"/"+date;
+   }
+   /*Cibo/$150/ho mangiato un gelato hihihih/25-01-2999*/
     public String getName() {
         return name;
     }
